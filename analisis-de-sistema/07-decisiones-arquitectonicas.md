@@ -1,0 +1,14 @@
+# Decisiones arquitectónicas de APU GO
+
+Estas decisiones son propuestas de diseño para responder a los drivers arquitectónicos. Se revisarán conforme se valide el sistema.
+
+| ID | Decisión arquitectónica | Driver relacionado | Justificación | Resultado previsto |
+|---|---|---|---|---|
+| ADR-001 | Organizar el backend como monolito modular. | DA01: concurrencia y crecimiento; DA06: mantenibilidad. | Permite separar funcionalidades sin exigir varios servicios independientes desde el inicio. El backend podrá replicarse si aumenta la demanda. | Una aplicación desplegable con módulos de usuarios, contenidos, actividades, progreso, gamificación, recomendaciones, reportes, notificaciones y auditoría. |
+| ADR-002 | Aplicar Clean Architecture dentro del backend. | DA06: mantenibilidad. | Mantiene las reglas de negocio separadas de la API, la base de datos y otros detalles tecnológicos. | Responsabilidades organizadas en dominio, aplicación, adaptadores e infraestructura; dependencias dirigidas hacia el núcleo. |
+| ADR-003 | Comunicar Flutter y el backend mediante API REST sobre HTTPS. | DA04: Web y Android; DA05: API REST; DA02: seguridad. | Una interfaz de comunicación común permite atender ambos clientes y proteger el intercambio de información. | Cliente Flutter conectado a endpoints REST del backend. |
+| ADR-004 | Incorporar caché según los resultados de las pruebas de carga. | DA01: concurrencia y rendimiento. | Reducir consultas repetitivas puede mejorar la respuesta cuando aumente el uso. | Redis para datos de consulta frecuente cuando las métricas justifiquen su uso. |
+| ADR-005 | Controlar el acceso por roles y minimizar los datos personales. | DA02: seguridad; DA03: privacidad. | Estudiantes, docentes y administradores requieren permisos diferentes; los datos de menores necesitan protección. | Autenticación, autorización por roles y restricciones sobre los datos enviados a servicios externos. |
+| ADR-006 | Separar los datos transaccionales de los archivos multimedia. | DA07: datos y multimedia. | Guardar audios e imágenes fuera de las tablas evita sobrecargar la base de datos y facilita su distribución. | PostgreSQL para datos; almacenamiento de objetos y CDN para archivos. |
+| ADR-007 | Incorporar monitoreo y respaldos. | DA08: continuidad del servicio. | Permite detectar fallos y recuperar información ante incidentes. | Registro de errores, métricas, alertas y copias de seguridad de PostgreSQL. |
+| ADR-008 | Acceder a la IA mediante una interfaz interna. | DA03: privacidad; DA06: mantenibilidad. | Permite comenzar con reglas de recomendación y evaluar una API externa sin acoplar a ella el módulo de aprendizaje. | Contrato de recomendaciones con una implementación inicial basada en reglas y una integración externa opcional. |
