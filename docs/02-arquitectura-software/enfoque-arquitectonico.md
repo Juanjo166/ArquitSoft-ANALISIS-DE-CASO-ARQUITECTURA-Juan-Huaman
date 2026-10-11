@@ -31,7 +31,7 @@ flowchart TB
     Infraestructura -->|"Implementa contratos de"| Aplicacion
 ```
 
-![Enfoque Clean Architecture de APU GO](../imagenes/Enfoque_Clean_Architecture.png)
+![Clean Architecture de APU GO](../../img/Enfoque_Clean_Architecture.png)
 
 ## Ejemplo: resolver una actividad
 

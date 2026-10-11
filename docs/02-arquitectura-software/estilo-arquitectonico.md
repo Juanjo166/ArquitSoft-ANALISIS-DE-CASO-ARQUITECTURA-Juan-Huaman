@@ -60,7 +60,7 @@ flowchart LR
 
 ## Diagrama del estilo arquitectónico
 
-![Diagrama del estilo arquitectónico de APU GO](imagenes/Estilo_Arquitectonico.png)
+![Estilo arquitectónico de APU GO](../../img/Estilo_Arquitectonico.png)
 
 *Figura 1. Estilo arquitectónico de APU GO. Fuente: elaboración propia.*
 
