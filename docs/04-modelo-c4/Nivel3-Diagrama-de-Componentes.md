@@ -20,21 +20,21 @@ El contenedor analizado es el backend modular identificado en el nivel 2. Los co
 
 | Componente | Responsabilidad | Requisitos relacionados |
 |---|---|---|
-| API REST y controles de acceso | Recibir solicitudes, verificar identidad y permisos, validar su formato y delegar a los casos de uso. | RF01–RF13 |
+| API REST y controles de acceso | Recibir solicitudes, verificar identidad y permisos, validar su formato y delegar a los casos de uso. | RF01–RF14 |
 | Autenticación y usuarios | Autenticar usuarios y gestionar cuentas y roles. | RF01, RF12 |
 | Contenidos educativos | Consultar y gestionar lecciones y referencias a recursos multimedia. | RF02, RF09 |
 | Actividades y evaluaciones | Gestionar ejercicios, registrar respuestas y evaluar resultados. | RF03, RF04, RF10 |
 | Progreso | Registrar y consultar el avance de cada estudiante. | RF05 |
 | Gamificación | Aplicar reglas para otorgar puntos y logros. | RF06 |
-| Recomendaciones | Seleccionar actividades de refuerzo según el avance. | RF07 |
+| Tutor IA y recomendaciones | Atender consultas educativas con Groq y seleccionar actividades de refuerzo según el avance. | RF07, RF14 |
 | Notificaciones | Generar y mostrar avisos relacionados con el aprendizaje. | RF08 |
 | Reportes | Elaborar reportes para docentes autorizados. | RF11 |
 | Auditoría | Registrar y consultar acciones administrativas relevantes. | RF13 |
 | Adaptadores de persistencia | Implementar los contratos de acceso a datos mediante PostgreSQL. | Requisitos que necesitan persistencia |
 | Adaptador multimedia | Gestionar archivos mediante la API del almacenamiento de objetos. | RF02, RF09 |
-| Adaptador de IA opcional | Transformar solicitudes y respuestas del proveedor externo, limitando los datos enviados. | RF07 |
+| AdaptadorGroq obligatorio | Implementar ServicioTutorIA y la integración externa requerida por ServicioRecomendaciones, filtrar solicitudes y manejar errores de Groq. | RF14, RF07 |
 
-Los componentes de negocio agrupan sus casos de uso y reglas. Las responsabilidades de dominio, aplicación, presentación e infraestructura se detallan en el diseño interno.
+Se conservan nueve módulos de negocio. Tutor IA y recomendaciones reúne RF14 y RF07 dentro de un mismo módulo. Los componentes de negocio agrupan sus casos de uso y reglas. Las responsabilidades de dominio, aplicación, presentación e infraestructura se detallan en el diseño interno.
 
 ## 4. Relaciones entre componentes
 
@@ -43,13 +43,13 @@ Los componentes de negocio agrupan sus casos de uso y reglas. Las responsabilida
 | API REST | Casos de uso de los módulos | Delegar una operación después de validar identidad, permisos y formato. |
 | Actividades y evaluaciones | Progreso | Registrar el efecto de una respuesta sobre el avance del estudiante. |
 | Actividades y evaluaciones | Gamificación | Solicitar la asignación de puntos y logros correspondientes. |
-| Recomendaciones | Progreso | Consultar los resultados y temas que requieren refuerzo. |
-| Recomendaciones | Actividades y evaluaciones | Consultar actividades disponibles para recomendar. |
+| Tutor IA y recomendaciones | Progreso | Consultar los resultados y temas que requieren refuerzo. |
+| Tutor IA y recomendaciones | Actividades y evaluaciones | Consultar actividades disponibles para recomendar. |
 | Reportes | Progreso | Obtener información de avance de los estudiantes autorizados. |
 | Usuarios, contenidos y actividades | Auditoría | Registrar cambios administrativos relevantes. |
 | Casos de uso | Contratos de persistencia | Solicitar operaciones de lectura y escritura. |
 | Contenidos educativos | Contrato multimedia | Solicitar la gestión de audios e imágenes. |
-| Recomendaciones | Contrato de recomendaciones externas | Solicitar apoyo externo únicamente si la integración está habilitada. |
+| Tutor IA y recomendaciones | ServicioTutorIA y ServicioRecomendaciones | Solicitar asistencia externa a Groq mediante el adaptador obligatorio. |
 
 Los adaptadores implementan los contratos utilizados por los casos de uso.
 
@@ -63,7 +63,7 @@ Las colaboraciones entre módulos pasan por interfaces públicas. Un módulo no 
 | Adaptadores de persistencia | PostgreSQL | Lectura y escritura mediante conexiones protegidas. |
 | Adaptador multimedia | Almacenamiento de objetos | Gestión de archivos mediante HTTPS. |
 | Repositorio de contenidos con caché, si se incorpora | Redis | Consulta, almacenamiento temporal e invalidación. |
-| Adaptador de IA, si se habilita | Servicio externo de IA | Solicitudes HTTPS con datos mínimos permitidos. |
+| AdaptadorGroq obligatorio | Groq: API externa de IA | Solicitudes HTTPS con mensajes filtrados y contexto mínimo permitido. |
 
 Las aplicaciones solicitan multimedia a la CDN según la vista de nivel 2. La CDN no forma parte de los componentes internos del backend.
 
@@ -102,8 +102,18 @@ Si la solicitud ya se procesó con el mismo contenido, se devuelve la salida alm
 | ADR-004 | Caché opcional incorporada según mediciones. |
 | ADR-005 | Autorización y minimización de datos personales. |
 | ADR-006 | Persistencia transaccional separada de los archivos multimedia. |
-| ADR-008 | Recomendaciones externas mediante un contrato interno. |
+| ADR-008 | Tutor con Groq obligatorio mediante contratos internos y adaptador. |
 
 ## 9. Estado
 
 La vista representa el diseño propuesto. Las dependencias, transacciones y atributos de calidad deberán verificarse durante la implementación.
+
+## 10. Flujo del tutor IA obligatorio
+
+1. La API identifica al estudiante y autoriza su consulta (RF14).
+2. ConsultarTutorIA obtiene el contexto educativo autorizado mediante interfaces de contenidos y progreso.
+3. El filtro de datos depura mensaje, historial y contexto.
+4. ServicioTutorIA delega a AdaptadorGroq, que envía la solicitud HTTPS con la clave del servidor.
+5. El backend valida la salida y la devuelve al cliente. Los errores de cuota, proveedor o espera generan una respuesta controlada.
+
+El tutor no escribe puntos ni participa en la transacción de RegistrarRespuesta. Los contratos se detallan en [Integración con Groq](../02-arquitectura-software/integracion-groq.md).

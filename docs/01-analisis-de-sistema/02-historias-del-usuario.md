@@ -14,3 +14,4 @@
 | HU10 | Como docente, quiero consultar reportes de progreso, para identificar estudiantes que necesitan apoyo. |
 | HU11 | Como administrador, quiero gestionar usuarios y roles, para controlar el acceso a la plataforma. |
 | HU12 | Como administrador, quiero consultar la auditoría de acciones, para supervisar cambios importantes en el sistema. |
+| HU13 | Como estudiante, quiero consultar dudas de quechua chanka con un tutor IA contextualizado, para recibir explicaciones y pistas durante mi aprendizaje. |

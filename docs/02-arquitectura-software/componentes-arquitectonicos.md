@@ -10,14 +10,14 @@ El cliente Flutter permite acceder desde Web y Android. El backend se organiza c
 
 | Componente | Responsabilidad | Requisitos relacionados |
 |---|---|---|
-| Cliente Flutter | Presentar las lecciones, actividades y funciones disponibles según el rol. | RF01–RF13 |
-| API REST | Recibir solicitudes HTTPS, validar su formato y delegar su atención a los casos de uso. | RF01–RF13 |
+| Cliente Flutter | Presentar las lecciones, actividades y funciones disponibles según el rol. | RF01–RF14 |
+| API REST | Recibir solicitudes HTTPS, validar su formato y delegar su atención a los casos de uso. | RF01–RF14 |
 | Autenticación y usuarios | Autenticar usuarios, administrar cuentas y verificar permisos según el rol. | RF01, RF12 |
 | Contenidos educativos | Consultar y gestionar lecciones y referencias a recursos multimedia. | RF02, RF09 |
 | Actividades y evaluaciones | Gestionar actividades, registrar respuestas y evaluar resultados. | RF03, RF04, RF10 |
 | Progreso | Registrar y consultar el avance de cada estudiante. | RF05 |
 | Gamificación | Aplicar las reglas para otorgar puntos y logros. | RF06 |
-| Recomendaciones | Seleccionar actividades de refuerzo según el progreso del estudiante. | RF07 |
+| Tutor IA y recomendaciones | Atender consultas educativas mediante Groq y seleccionar actividades de refuerzo según el progreso. | RF07, RF14 |
 | Notificaciones | Generar y mostrar avisos de aprendizaje. | RF08 |
 | Reportes | Elaborar información de progreso para los docentes autorizados. | RF11 |
 | Auditoría | Registrar y consultar acciones administrativas relevantes. | RF13 |
@@ -65,7 +65,7 @@ El registro de la respuesta, el progreso y los puntos debe mantener consistencia
 | PostgreSQL | Usuarios, lecciones, actividades, respuestas, progreso, puntos, logros y auditoría. |
 | Almacenamiento de objetos | Archivos de audio e imágenes; PostgreSQL conserva sus referencias. |
 | CDN | Distribución de recursos multimedia al cliente. |
-| Servicio externo de IA | Integración opcional mediante un contrato de recomendaciones. |
+| Groq: API externa de IA obligatoria | Proporcionar tutoría mediante ServicioTutorIA y AdaptadorGroq, y apoyar las recomendaciones previstas. |
 | Redis | Caché opcional cuando las mediciones justifiquen incorporarla. |
 
 ## Relación con las decisiones arquitectónicas
@@ -75,8 +75,14 @@ El registro de la respuesta, el progreso y los puntos debe mantener consistencia
 - ADR-003: comunicación con Flutter mediante REST sobre HTTPS.
 - ADR-005: autorización por roles y minimización de datos personales.
 - ADR-006: separación de datos transaccionales y archivos multimedia.
-- ADR-008: recomendaciones desacopladas de un proveedor externo de IA.
+- ADR-008: Groq obligatorio mediante contratos de tutoría y recomendaciones.
 
 ## Estado
 
 Los componentes representan el diseño propuesto. Su funcionamiento y sus atributos de calidad deberán verificarse durante la implementación.
+
+## Tutor IA obligatorio
+
+El módulo **Tutor IA y recomendaciones** incluye ConsultarTutorIA (RF14) y ObtenerRecomendaciones (RF07). Conserva el total de nueve módulos. La API delega consultas autenticadas al caso de uso, que filtra mensaje, historial y contexto y utiliza ServicioTutorIA. AdaptadorGroq implementa el contrato mediante HTTPS.
+
+Groq no participa en la transacción de RegistrarRespuesta ni determina puntos o resultados de evaluación. Si falla, el tutor informa su indisponibilidad y las actividades siguen disponibles. Véase [Integración obligatoria con Groq](integracion-groq.md).

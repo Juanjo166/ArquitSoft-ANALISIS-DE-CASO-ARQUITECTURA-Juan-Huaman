@@ -148,3 +148,21 @@ Esta vista desarrolla el componente Actividades y evaluaciones de C3 y mantiene 
 El nivel 4 detalla un caso de uso representativo del backend. Los demás componentes podrán documentarse con el mismo criterio conforme avance la implementación.
 
 Las clases y diagramas deben actualizarse si cambian los contratos o las reglas del caso de uso.
+
+## 7. Código del tutor con Groq obligatorio
+
+Esta vista complementa el detalle de RegistrarRespuesta. La asistencia educativa se resuelve en el módulo Tutor IA y recomendaciones, sin modificar el motor de evaluación.
+
+| Elemento | Capa | Responsabilidad |
+|---|---|---|
+| ControladorTutorIA | Presentación | Recibir la consulta autenticada y transformar salida o error a HTTP. |
+| ConsultarTutorIA | Aplicación | Coordinar contexto autorizado, filtrado y consulta al tutor. |
+| ServicioTutorIA | Contrato de aplicación | responder(mensajeFiltrado, historialFiltrado, contextoPermitido): RespuestaTutor. |
+| FiltroDatosIA | Aplicación | Aplicar la lista de campos permitidos y depurar información personal de mensajes e historial. |
+| AdaptadorGroq | Infraestructura | Implementar ServicioTutorIA mediante la API HTTPS de Groq. |
+
+![Contratos del tutor IA obligatorio](../../img/nivel4-tutor-groq.png)
+
+**Secuencia:** Flutter envía la consulta a ControladorTutorIA; ConsultarTutorIA verifica acceso y obtiene contexto; FiltroDatosIA depura la entrada; AdaptadorGroq llama al proveedor; el caso de uso valida la respuesta y devuelve asistencia o un error controlado. No se abre una transacción de progreso o puntos para esperar al proveedor.
+
+Trazabilidad: HU13, RF14, RC10, DA09 y ADR-008. El modelo, las cuotas y los límites se configuran en el servidor y deben validarse antes del despliegue.
