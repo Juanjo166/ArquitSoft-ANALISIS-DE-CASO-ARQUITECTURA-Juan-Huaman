@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram id="c1-apugo" name="C1 Contexto APU GO">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageWidth="1500" pageHeight="1100" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="APU GO · C4 Nivel 1: contexto del sistema" style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=18;spacing=16;strokeColor=none;fillColor=#FFFFFF;fontColor=#0F172A;fontSize=30;fontStyle=1;align=left;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="25" width="1380" height="65" />
+        </mxCell>
+        <mxCell id="sub" value="Personas, sistema principal y relaciones externas · Diseño propuesto" style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=18;spacing=16;strokeColor=none;fillColor=#FFFFFF;fontColor=#64748B;align=left;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="95" width="1380" height="40" />
+        </mxCell>
+        <mxCell id="est" value="Estudiante&#10;[Persona]&#10;&#10;Practica quechua y consulta su avance." style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=18;spacing=16;strokeColor=none;fillColor=#0B365B;fontColor=#FFFFFF;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="80" y="200" width="380" height="190" />
+        </mxCell>
+        <mxCell id="doc" value="Docente&#10;[Persona]&#10;&#10;Organiza contenidos y acompaña el aprendizaje." style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=18;spacing=16;strokeColor=none;fillColor=#0B365B;fontColor=#FFFFFF;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="560" y="200" width="380" height="190" />
+        </mxCell>
+        <mxCell id="admin" value="Administrador&#10;[Persona]&#10;&#10;Gestiona accesos y supervisa acciones." style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=18;spacing=16;strokeColor=none;fillColor=#0B365B;fontColor=#FFFFFF;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1040" y="200" width="380" height="190" />
+        </mxCell>
+        <mxCell id="apu" value="APU GO&#10;[Sistema de software]&#10;&#10;Plataforma Web y Android para aprender quechua chanka&#10;con actividades, gamificación y seguimiento académico." style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=18;spacing=16;strokeColor=none;fillColor=#1672B8;fontColor=#FFFFFF;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="450" y="535" width="600" height="225" />
+        </mxCell>
+        <mxCell id="ia" value="Groq: API externa de IA&#10;[Sistema externo obligatorio]&#10;&#10;Proporciona tutoría contextualizada y apoya recomendaciones." style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=18;spacing=16;strokeColor=none;fillColor=#6B7280;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1090" y="545" width="350" height="210" />
+        </mxCell>
+        <mxCell id="e1" value="Consulta lecciones, responde actividades&#10;y revisa progreso, puntos y logros" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=15;labelBackgroundColor=#FFFFFF;strokeColor=#64748B;strokeWidth=2;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.15;entryY=0;" edge="1" parent="1" source="est" target="apu">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e2" value="Gestiona contenidos y actividades;&#10;consulta reportes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=15;labelBackgroundColor=#FFFFFF;strokeColor=#64748B;strokeWidth=2;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="doc" target="apu">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3" value="Gestiona usuarios y roles;&#10;consulta auditoría" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=15;labelBackgroundColor=#FFFFFF;strokeColor=#64748B;strokeWidth=2;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.85;entryY=0;" edge="1" parent="1" source="admin" target="apu">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e4" value="Solicita tutoría&#10;Datos filtrados" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=15;labelBackgroundColor=#FFFFFF;strokeColor=#64748B;strokeWidth=2;endArrow=block;endFill=1;exitX=1;exitY=0.2;entryX=0;entryY=0.2;exitX=0.9;exitY=0;entryX=0.5;entryY=0;" edge="1" parent="1" source="apu" target="ia">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="990" y="515" />
+              <mxPoint x="1265" y="515" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" value="Devuelve&#10;asistencia educativa" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=15;labelBackgroundColor=#FFFFFF;strokeColor=#64748B;strokeWidth=2;endArrow=block;endFill=1;exitX=0;exitY=0.85;entryX=1;entryY=0.85;exitX=0.5;exitY=1;entryX=0.9;entryY=1;" edge="1" parent="1" source="ia" target="apu">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1265" y="820" />
+              <mxPoint x="990" y="820" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend" value="AZUL OSCURO: persona     AZUL: sistema principal     GRIS: sistema externo&#10;Líneas continuas: integración obligatoria con Groq. Las flechas representan interacciones." style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=18;spacing=16;strokeColor=none;fillColor=#F1F5F9;fontColor=#334155;align=left;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="860" width="1380" height="85" />
+        </mxCell>
+        <mxCell id="note" value="Groq es obligatorio para el tutor IA (RF14). Las recomendaciones de refuerzo corresponden a RF07.&#10;No se envían datos identificables de estudiantes. API, módulos, PostgreSQL y multimedia se detallan en niveles posteriores." style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=18;spacing=16;strokeColor=none;fillColor=#FFFFFF;fontColor=#64748B;align=left;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="965" width="1380" height="90" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

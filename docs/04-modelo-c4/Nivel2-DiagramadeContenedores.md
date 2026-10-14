@@ -34,7 +34,7 @@ Los almacenes gestionados por proveedores siguen formando parte de la solución.
 | Sistema | Responsabilidad | Condición |
 |---|---|---|
 | CDN | Distribuir recursos multimedia desde el almacenamiento de objetos. | Su proveedor y configuración están pendientes de definición. |
-| Servicio externo de IA | Proporcionar recomendaciones mediante un adaptador interno. | Integración opcional; la primera versión puede utilizar reglas internas. |
+| Groq: API externa de IA | Proporcionar tutoría contextualizada y apoyar las recomendaciones previstas mediante AdaptadorGroq. | Integración obligatoria; modelo, cuotas y límites operativos por configurar. |
 
 ## 5. Relaciones
 
@@ -47,7 +47,7 @@ Los almacenes gestionados por proveedores siguen formando parte de la solución.
 | Aplicaciones | CDN | HTTPS | Solicitudes de audios e imágenes. |
 | CDN | Almacenamiento de objetos | Acceso protegido al origen | Recuperación de recursos multimedia. |
 | Backend | Redis | Conexión interna protegida | Consultas, almacenamiento e invalidación de caché. |
-| Backend | Servicio externo de IA | HTTPS | Datos mínimos de aprendizaje y recomendaciones. |
+| Backend | Groq | HTTPS | Mensajes e historial filtrados, contexto educativo mínimo y respuestas del tutor. |
 
 Los clientes no acceden directamente a PostgreSQL ni a Redis.
 
@@ -61,7 +61,7 @@ Los clientes no acceden directamente a PostgreSQL ni a Redis.
 | ADR-004: caché según mediciones | Redis aparece como un elemento opcional. |
 | ADR-005: seguridad y privacidad | El backend controla permisos y limita los datos enviados al exterior. |
 | ADR-006: multimedia separada | PostgreSQL y almacenamiento de objetos tienen responsabilidades distintas. |
-| ADR-008: contrato de recomendaciones | La API externa de IA se utiliza mediante un adaptador opcional. |
+| ADR-008: integración obligatoria con Groq | El backend utiliza ServicioTutorIA y AdaptadorGroq para el tutor, además del contrato ServicioRecomendaciones. |
 
 ## 7. Seguridad entre contenedores
 

@@ -12,11 +12,11 @@ El backend se desplegará inicialmente como una sola aplicación. Sus funcionali
 |---|---|
 | Flutter Web y Android | Presentar lecciones, actividades, progreso y funciones según el rol del usuario. |
 | API REST | Recibir solicitudes del cliente y dirigirlas a las funciones correspondientes. |
-| Backend modular | Aplicar las reglas de usuarios, aprendizaje, gamificación, recomendaciones, reportes y auditoría. |
+| Backend modular | Aplicar las reglas de usuarios, aprendizaje, gamificación, tutor IA y recomendaciones, reportes y auditoría. |
 | PostgreSQL | Almacenar los datos transaccionales. |
 | Almacenamiento de objetos y CDN | Guardar y distribuir audios, imágenes y otros recursos multimedia. |
 | Redis | Reducir consultas repetitivas cuando las pruebas de rendimiento justifiquen incorporarlo. |
-| Servicio externo de IA | Apoyar recomendaciones o retroalimentación si se decide habilitar esa integración. |
+| Groq: API externa de IA obligatoria | Proporcionar asistencia contextualizada al tutor (RF14) y apoyar las recomendaciones previstas (RF07). |
 
 ## Diagrama del estilo arquitectónico
 
@@ -30,14 +30,14 @@ flowchart LR
         Aprendizaje["Contenidos y actividades"]
         Progreso["Progreso y gamificación"]
         Gestion["Usuarios, reportes y auditoría"]
-        Recomendaciones["Recomendaciones"]
+        Recomendaciones["Tutor IA y recomendaciones"]
     end
 
     PostgreSQL[("PostgreSQL")]
     Objetos["Almacenamiento de objetos"]
     CDN["CDN"]
     Redis[("Redis<br/>según demanda")]
-    IA["Servicio externo de IA<br/>opcional"]
+    IA["Groq: API externa de IA<br/>obligatoria"]
 
     Usuarios --> Flutter
     Flutter -->|"HTTPS / REST"| API
@@ -55,7 +55,7 @@ flowchart LR
     Objetos --> CDN
     CDN --> Flutter
     API -. "Caché según demanda" .-> Redis
-    Recomendaciones -. "Integración opcional" .-> IA
+    Recomendaciones -->|"HTTPS: tutor IA"| IA
 ```
 
 ## Diagrama del estilo arquitectónico
@@ -76,3 +76,7 @@ La organización modular y la ausencia de sesiones locales en cada instancia per
 - **ADR-003:** comunicación entre Flutter y el backend mediante API REST.
 - **ADR-004:** caché incorporada según mediciones.
 - **ADR-006:** almacenamiento multimedia separado de PostgreSQL.
+
+## Dependencia obligatoria de Groq
+
+El backend consume Groq mediante HTTPS, protege la clave en su entorno y controla tiempos de espera y cuotas. El módulo Tutor IA y recomendaciones responde a RF14 y RF07. La recuperación ante fallos y la privacidad se verifican en EQ-07 y EQ-06. Esta organización describe la arquitectura objetivo a la que se adaptará el MVP.

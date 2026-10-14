@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" modified="2026-10-05T00:00:00.000Z" agent="APU GO" version="24.7.17" type="device">
+  <diagram id="apugo-clean" name="Clean Architecture - APU GO">
+    <mxGraphModel dx="1850" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1840" pageHeight="1030" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;APU GO&lt;/b&gt;  |  Clean Architecture" style="rounded=1;whiteSpace=wrap;html=1;arcSize=13;fillColor=#112849;strokeColor=#112849;strokeWidth=2;fontColor=#ffffff;fontSize=29;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="30" width="1750" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Regla: las dependencias de código apuntan hacia el núcleo del negocio" style="rounded=1;whiteSpace=wrap;html=1;arcSize=13;fillColor=#ffffff;strokeColor=#ffffff;strokeWidth=2;fontColor=#53647d;fontSize=18;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="48" y="110" width="1600" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="boundary" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=13;fillColor=#fafbff;strokeColor=#b5c0d7;strokeWidth=2;fontColor=#253b5d;fontSize=17;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;dashed=1;dashPattern=9 5;" vertex="1" parent="1">
+          <mxGeometry x="345" y="185" width="1420" height="715" as="geometry" />
+        </mxCell>
+        <mxCell id="backendlabel" value="BACKEND APU GO · MONOLITO MODULAR" style="rounded=1;whiteSpace=wrap;html=1;arcSize=13;fillColor=#e8ecfa;strokeColor=#c2cbea;strokeWidth=2;fontColor=#374c79;fontSize=19;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="200" width="1350" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="flutter" value="&lt;b&gt;CLIENTE FLUTTER&lt;/b&gt;&lt;br&gt;&lt;br&gt;Web y Android&lt;br&gt;&lt;font color=&quot;#52647b&quot;&gt;Aplicación externa&lt;br&gt;al backend&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=13;fillColor=#e8f7f3;strokeColor=#62b3a3;strokeWidth=2;fontColor=#1d5149;fontSize=18;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="45" y="345" width="250" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="presentation" value="&lt;b&gt;PRESENTACIÓN&lt;/b&gt;&lt;br&gt;&lt;br&gt;Controladores REST&lt;br&gt;Validación de entrada&lt;br&gt;DTO de respuesta" style="rounded=1;whiteSpace=wrap;html=1;arcSize=13;fillColor=#e9f3fc;strokeColor=#78abd7;strokeWidth=2;fontColor=#244e75;fontSize=18;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="395" y="325" width="320" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="application" value="&lt;b&gt;APLICACIÓN&lt;/b&gt;&lt;br&gt;&lt;br&gt;Casos de uso&lt;br&gt;&lt;i&gt;RegistrarRespuesta&lt;/i&gt;&lt;br&gt;Puertos e interfaces" style="rounded=1;whiteSpace=wrap;html=1;arcSize=13;fillColor=#f0edfc;strokeColor=#9b8cda;strokeWidth=2;fontColor=#4a3d83;fontSize=18;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="785" y="325" width="320" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="domain" value="&lt;b&gt;DOMINIO&lt;/b&gt;&lt;br&gt;&lt;br&gt;Estudiante · Lección&lt;br&gt;Actividad · Progreso&lt;br&gt;Reglas de puntos" style="rounded=1;whiteSpace=wrap;html=1;arcSize=13;fillColor=#fff1d9;strokeColor=#dfa956;strokeWidth=2;fontColor=#704813;fontSize=18;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1175" y="325" width="320" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="infra" value="&lt;b&gt;INFRAESTRUCTURA&lt;/b&gt;&lt;br&gt;Implementa los puertos definidos en Aplicación" style="rounded=1;whiteSpace=wrap;html=1;arcSize=13;fillColor=#f0f5f8;strokeColor=#889db5;strokeWidth=2;fontColor=#344a61;fontSize=18;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="785" y="645" width="710" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="postgres" value="&lt;b&gt;PostgreSQL&lt;/b&gt;&lt;br&gt;Repositorio de progreso" style="rounded=1;whiteSpace=wrap;html=1;arcSize=13;fillColor=#e9f3fc;strokeColor=#78abd7;strokeWidth=2;fontColor=#244e75;fontSize=16;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="805" y="785" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="media" value="&lt;b&gt;Multimedia&lt;/b&gt;&lt;br&gt;Archivos y audios" style="rounded=1;whiteSpace=wrap;html=1;arcSize=13;fillColor=#e8f7f3;strokeColor=#62b3a3;strokeWidth=2;fontColor=#1d5149;fontSize=16;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1035" y="785" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ai" value="&lt;b&gt;Groq obligatorio&lt;/b&gt;&lt;br&gt;Adaptador de infraestructura" style="rounded=1;whiteSpace=wrap;html=1;arcSize=13;fillColor=#f5edfb;strokeColor=#b69ad7;strokeWidth=2;fontColor=#604681;fontSize=16;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="785" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="note" value="&lt;b&gt;Ejemplo:&lt;/b&gt; Flutter envía una respuesta; Presentación llama al caso de uso; Aplicación aplica reglas del Dominio y utiliza un puerto que Infraestructura implementa con PostgreSQL." style="rounded=1;whiteSpace=wrap;html=1;arcSize=13;fillColor=#f8fafc;strokeColor=#d5dfea;strokeWidth=2;fontColor=#52647b;fontSize=15;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;align=left;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="45" y="930" width="1710" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="Solicitud HTTPS" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#4c9e9a;strokeWidth=3;fontColor=#34445d;fontSize=15;fontFamily=Arial;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;dashed=1;dashPattern=8 5;" edge="1" parent="1" source="flutter" target="presentation">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="Depende de" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#477fae;strokeWidth=3;fontColor=#34445d;fontSize=15;fontFamily=Arial;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="presentation" target="application">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="Depende de" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#806dbd;strokeWidth=3;fontColor=#34445d;fontSize=15;fontFamily=Arial;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="application" target="domain">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="Implementa puertos" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#71879d;strokeWidth=3;fontColor=#34445d;fontSize=15;fontFamily=Arial;labelBackgroundColor=#ffffff;exitX=0.35;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="infra" target="application">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#8899ad;strokeWidth=3;fontColor=#34445d;fontSize=15;fontFamily=Arial;labelBackgroundColor=#ffffff;exitX=0.15;exitY=1;entryX=0.5;entryY=0;dashed=1;dashPattern=8 5;" edge="1" parent="1" source="infra" target="postgres">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#8899ad;strokeWidth=3;fontColor=#34445d;fontSize=15;fontFamily=Arial;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;dashed=1;dashPattern=8 5;" edge="1" parent="1" source="infra" target="media">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#8899ad;strokeWidth=3;fontColor=#34445d;fontSize=15;fontFamily=Arial;labelBackgroundColor=#ffffff;exitX=0.85;exitY=1;entryX=0.5;entryY=0;dashPattern=8 5;" edge="1" parent="1" source="infra" target="ai">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

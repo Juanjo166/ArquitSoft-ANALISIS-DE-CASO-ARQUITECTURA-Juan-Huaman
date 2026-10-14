@@ -22,7 +22,7 @@ flowchart TB
     subgraph NEGOCIO["CAPA DE LÓGICA DE NEGOCIO · MONOLITO MODULAR"]
         Usuarios["Autenticación y usuarios"]
         Aprendizaje["Contenidos educativos<br/>Actividades y evaluaciones<br/>Progreso"]
-        Motivacion["Gamificación<br/>Recomendaciones con IA<br/>Notificaciones"]
+        Motivacion["Gamificación<br/>Tutor IA y recomendaciones<br/>Notificaciones"]
         Gestion["Reportes<br/>Auditoría"]
     end
 
@@ -34,7 +34,7 @@ flowchart TB
 
     subgraph EXTERNOS["SERVICIOS EXTERNOS"]
         CDN["CDN"]
-        IA["Servicio externo de IA<br/>(opcional)"]
+        IA["Groq: API externa de IA<br/>(obligatoria)"]
     end
 
     Estudiante --> Flutter
@@ -56,7 +56,7 @@ flowchart TB
     Aprendizaje --> Objetos
     Objetos --> CDN
     CDN --> Flutter
-    Motivacion -. Integración opcional .-> IA
+    Motivacion -->|"HTTPS: tutor IA"| IA
 ```
 
 ## Responsabilidades de las capas
@@ -64,13 +64,13 @@ flowchart TB
 | Capa | Responsabilidad | Componentes de APU GO |
 |---|---|---|
 | Presentación | Permitir la interacción con los usuarios y recibir las solicitudes. | Aplicación Flutter para Web y Android; entrada mediante API REST. |
-| Lógica de negocio | Aplicar las reglas de aprendizaje y administrar las funciones del sistema. | Autenticación y usuarios, contenidos, actividades y evaluaciones, progreso, gamificación, recomendaciones, reportes, notificaciones y auditoría. |
+| Lógica de negocio | Aplicar las reglas de aprendizaje y administrar las funciones del sistema. | Autenticación y usuarios, contenidos, actividades y evaluaciones, progreso, gamificación, tutor IA y recomendaciones, reportes, notificaciones y auditoría. |
 | Datos | Almacenar y recuperar la información. | Capa de persistencia, PostgreSQL y almacenamiento de objetos para archivos multimedia. |
 
 ## Sistemas externos
 
 - **CDN:** distribuye los audios, imágenes y recursos estáticos.
-- **Servicio externo de IA:** puede apoyar las recomendaciones y la retroalimentación. Su integración es opcional y debe respetar la privacidad de los estudiantes.
+- **Groq: API externa de IA obligatoria:** proporciona el tutor educativo (RF14) y apoya las recomendaciones previstas (RF07), mediante contratos internos y filtrado de datos.
 
 ## Decisiones iniciales
 

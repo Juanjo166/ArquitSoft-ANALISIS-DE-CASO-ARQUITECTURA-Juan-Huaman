@@ -10,11 +10,11 @@ El aprendizaje de una lengua requiere práctica frecuente, recursos de pronuncia
 
 ## Necesidad
 
-La institución necesita una herramienta digital complementaria que reúna contenidos de quechua chanka, audios, actividades interactivas y resultados de aprendizaje en un mismo espacio. Los estudiantes necesitan practicar y consultar su progreso; los docentes necesitan gestionar actividades y revisar el desempeño de sus grupos.
+La institución necesita una herramienta digital complementaria que reúna contenidos de quechua chanka, audios, actividades interactivas y resultados de aprendizaje en un mismo espacio. Los estudiantes necesitan practicar, consultar sus dudas con el tutor IA y consultar su progreso; los docentes necesitan gestionar actividades y revisar el desempeño de sus grupos.
 
 ## Objetivo de la solución
 
-Diseñar e implementar APU GO como una plataforma Web y Android que apoye el aprendizaje del quechua chanka mediante lecciones, actividades gamificadas, recomendaciones de refuerzo y seguimiento académico.
+Diseñar e implementar APU GO como una plataforma Web y Android que apoye el aprendizaje del quechua chanka mediante lecciones, actividades gamificadas, un tutor IA obligatorio con Groq, recomendaciones de refuerzo y seguimiento académico.
 
 ## Valor esperado
 

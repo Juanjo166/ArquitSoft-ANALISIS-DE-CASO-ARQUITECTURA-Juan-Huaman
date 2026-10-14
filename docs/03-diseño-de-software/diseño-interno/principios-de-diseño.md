@@ -78,6 +78,7 @@ Se evitará un contrato general que reúna todas las operaciones del sistema.
 | RegistroRespuestas | Guardar una respuesta y comprobar si una solicitud ya fue procesada. |
 | RepositorioProgreso | Consultar y guardar el progreso del estudiante. |
 | ServicioRecomendaciones | Obtener actividades sugeridas a partir de datos permitidos de aprendizaje. |
+| ServicioTutorIA | Obtener una respuesta educativa de Groq a partir de un mensaje y contexto previamente filtrados. |
 
 Cada consumidor depende únicamente de las operaciones que utiliza.
 
@@ -132,3 +133,7 @@ Este diseño responde a:
 - AC05: mantenibilidad.
 - DA06: mantenibilidad y evolución modular.
 - ADR-002: aplicación de Clean Architecture.
+
+## SOLID en la integración obligatoria de Groq
+
+ConsultarTutorIA coordina la consulta, el filtro aplica las reglas de datos permitidos y AdaptadorGroq realiza la comunicación HTTP. ServicioTutorIA permite sustituir la implementación respetando el contrato y el manejo de errores. Estas responsabilidades complementan el ejemplo de actividades sin introducir dependencia del dominio hacia Groq.

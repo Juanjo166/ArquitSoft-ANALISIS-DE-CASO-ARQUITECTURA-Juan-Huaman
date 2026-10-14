@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="24.7.17">
+  <diagram name="01 Componentes" id="01-Componentes">
+    <mxGraphModel dx="1400" dy="1100" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="1400" pageHeight="1100" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="APU GO | Componentes arquitectónicos" style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=15;spacing=10;strokeWidth=1.5;fillColor=#FFFFFF;strokeColor=#718096;strokeColor=none;fontSize=27;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="100" y="20" width="1200" height="55" />
+        </mxCell>
+        <mxCell id="backend" value="BACKEND APU GO · MONOLITO MODULAR" style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=15;spacing=10;strokeWidth=1.5;fillColor=#F7FAFC;strokeColor=#718096;verticalAlign=top;align=left;fontStyle=1;spacingTop=15;dashed=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="100" y="215" width="1200" height="580" />
+        </mxCell>
+        <mxCell id="client" value="Cliente Flutter · Web y Android&#10;Estudiante · Docente · Administrador" style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=15;spacing=10;strokeWidth=1.5;fillColor=#DBEAFE;strokeColor=#718096;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="460" y="90" width="480" height="80" />
+        </mxCell>
+        <mxCell id="api" value="API REST · Validación y autorización&#10;Entrada a los casos de uso · HTTPS" style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=15;spacing=10;strokeWidth=1.5;fillColor=#BFDBFE;strokeColor=#718096;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="460" y="265" width="480" height="75" />
+        </mxCell>
+        <mxCell id="g1" value="IDENTIDAD Y GESTIÓN" style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=15;spacing=10;strokeWidth=1.5;fillColor=#FFFFFF;strokeColor=#718096;verticalAlign=top;fontStyle=1;spacingTop=12;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="140" y="390" width="340" height="275" />
+        </mxCell>
+        <mxCell id="g2" value="APRENDIZAJE" style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=15;spacing=10;strokeWidth=1.5;fillColor=#FFFFFF;strokeColor=#718096;verticalAlign=top;fontStyle=1;spacingTop=12;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="530" y="390" width="340" height="275" />
+        </mxCell>
+        <mxCell id="g3" value="MOTIVACIÓN" style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=15;spacing=10;strokeWidth=1.5;fillColor=#FFFFFF;strokeColor=#718096;verticalAlign=top;fontStyle=1;spacingTop=12;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="920" y="390" width="340" height="275" />
+        </mxCell>
+        <mxCell id="u" value="Autenticación y usuarios · RF01, RF12" style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=15;spacing=10;strokeWidth=1.5;fillColor=#E6F4EA;strokeColor=#718096;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="160" y="440" width="300" height="60" />
+        </mxCell>
+        <mxCell id="r" value="Reportes · RF11" style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=15;spacing=10;strokeWidth=1.5;fillColor=#E6F4EA;strokeColor=#718096;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="160" y="510" width="300" height="60" />
+        </mxCell>
+        <mxCell id="a" value="Auditoría · RF13" style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=15;spacing=10;strokeWidth=1.5;fillColor=#E6F4EA;strokeColor=#718096;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="160" y="580" width="300" height="60" />
+        </mxCell>
+        <mxCell id="c" value="Contenidos · RF02, RF09" style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=15;spacing=10;strokeWidth=1.5;fillColor=#E6F4EA;strokeColor=#718096;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="550" y="440" width="300" height="60" />
+        </mxCell>
+        <mxCell id="e" value="Actividades y evaluaciones&#10;RF03, RF04, RF10" style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=15;spacing=10;strokeWidth=1.5;fillColor=#E6F4EA;strokeColor=#718096;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="550" y="510" width="300" height="60" />
+        </mxCell>
+        <mxCell id="p" value="Progreso · RF05" style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=15;spacing=10;strokeWidth=1.5;fillColor=#E6F4EA;strokeColor=#718096;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="550" y="580" width="300" height="60" />
+        </mxCell>
+        <mxCell id="g" value="Gamificación · RF06" style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=15;spacing=10;strokeWidth=1.5;fillColor=#E6F4EA;strokeColor=#718096;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="440" width="300" height="60" />
+        </mxCell>
+        <mxCell id="re" value="Tutor IA y recomendaciones&#10;RF07, RF14" style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=15;spacing=10;strokeWidth=1.5;fillColor=#E6F4EA;strokeColor=#718096;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="510" width="300" height="60" />
+        </mxCell>
+        <mxCell id="n" value="Notificaciones · RF08" style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=15;spacing=10;strokeWidth=1.5;fillColor=#E6F4EA;strokeColor=#718096;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="580" width="300" height="60" />
+        </mxCell>
+        <mxCell id="ad" value="Adaptadores de infraestructura&#10;Persistencia · Archivos · Tutor con Groq" style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=15;spacing=10;strokeWidth=1.5;fillColor=#FEF3C7;strokeColor=#718096;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="400" y="710" width="600" height="65" />
+        </mxCell>
+        <mxCell id="db" value="PostgreSQL&#10;Datos transaccionales" style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=15;spacing=10;strokeWidth=1.5;fillColor=#FCE7F3;strokeColor=#718096;shape=cylinder;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="140" y="865" width="270" height="80" />
+        </mxCell>
+        <mxCell id="obj" value="Almacenamiento de objetos y CDN&#10;Audios e imágenes" style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=15;spacing=10;strokeWidth=1.5;fillColor=#FCE7F3;strokeColor=#718096;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="460" y="865" width="370" height="80" />
+        </mxCell>
+        <mxCell id="ia" value="Groq: API externa de IA&#10;Obligatoria" style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=15;spacing=10;strokeWidth=1.5;fillColor=#F3E8FF;strokeColor=#718096;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="900" y="865" width="350" height="80" />
+        </mxCell>
+        <mxCell id="ec" value="HTTPS / REST" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=#FFFFFF;strokeColor=#526477;strokeWidth=1.5;" edge="1" parent="1" source="client" target="api">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="apig1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=#FFFFFF;strokeColor=#526477;strokeWidth=1.5;exitX=0.15;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="api" target="g1">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="adg1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=#FFFFFF;strokeColor=#526477;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0.15;entryY=0;" edge="1" parent="1" source="g1" target="ad">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="apig2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=#FFFFFF;strokeColor=#526477;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="api" target="g2">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="adg2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=#FFFFFF;strokeColor=#526477;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="g2" target="ad">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="apig3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=#FFFFFF;strokeColor=#526477;strokeWidth=1.5;exitX=0.85;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="api" target="g3">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="adg3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=#FFFFFF;strokeColor=#526477;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0.85;entryY=0;" edge="1" parent="1" source="g3" target="ad">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="outdb" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=#FFFFFF;strokeColor=#526477;strokeWidth=1.5;exitX=0.15;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="ad" target="db">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="outobj" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=#FFFFFF;strokeColor=#526477;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="ad" target="obj">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="outia" value="Integración obligatoria" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=#FFFFFF;strokeColor=#526477;strokeWidth=1.5;exitX=0.85;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="ad" target="ia">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="media" value="Solicita multimedia" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=#FFFFFF;strokeColor=#526477;strokeWidth=1.5;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="client" target="obj">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="80" y="130" />
+              <mxPoint x="80" y="950" />
+              <mxPoint x="450" y="950" />
+              <mxPoint x="450" y="905" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note" value="Las flechas muestran comunicación y colaboración, no dependencias del código.&#10;Los bloques agrupan módulos para facilitar la lectura; el backend es una sola aplicación.&#10;Redis: caché opcional, pendiente de justificar mediante mediciones." style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=15;spacing=10;strokeWidth=1.5;fillColor=#FFFFFF;strokeColor=#718096;strokeColor=none;fontSize=14;align=left;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="100" y="985" width="1200" height="80" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="02 Colaboración entre módulos" id="02-Colaboración-entre-módulos">
+    <mxGraphModel dx="1400" dy="1100" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="1400" pageHeight="1100" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="APU GO | Colaboración entre módulos" style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=15;spacing=10;strokeWidth=1.5;fillColor=#FFFFFF;strokeColor=#718096;strokeColor=none;fontSize=27;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="100" y="25" width="1200" height="60" />
+        </mxCell>
+        <mxCell id="act" value="Actividades y evaluaciones" style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=15;spacing=10;strokeWidth=1.5;fillColor=#E6F4EA;strokeColor=#718096;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="540" y="140" width="240" height="90" />
+        </mxCell>
+        <mxCell id="pro" value="Progreso" style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=15;spacing=10;strokeWidth=1.5;fillColor=#E6F4EA;strokeColor=#718096;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="330" y="360" width="240" height="90" />
+        </mxCell>
+        <mxCell id="gam" value="Gamificación" style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=15;spacing=10;strokeWidth=1.5;fillColor=#E6F4EA;strokeColor=#718096;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="800" y="360" width="240" height="90" />
+        </mxCell>
+        <mxCell id="rec" value="Tutor IA y recomendaciones" style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=15;spacing=10;strokeWidth=1.5;fillColor=#E6F4EA;strokeColor=#718096;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="100" y="140" width="240" height="90" />
+        </mxCell>
+        <mxCell id="rep" value="Reportes" style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=15;spacing=10;strokeWidth=1.5;fillColor=#E6F4EA;strokeColor=#718096;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="120" y="570" width="240" height="90" />
+        </mxCell>
+        <mxCell id="usr" value="Usuarios" style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=15;spacing=10;strokeWidth=1.5;fillColor=#E6F4EA;strokeColor=#718096;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1060" y="570" width="240" height="90" />
+        </mxCell>
+        <mxCell id="cont" value="Contenidos" style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=15;spacing=10;strokeWidth=1.5;fillColor=#E6F4EA;strokeColor=#718096;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1060" y="140" width="240" height="90" />
+        </mxCell>
+        <mxCell id="aud" value="Auditoría" style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=15;spacing=10;strokeWidth=1.5;fillColor=#E6F4EA;strokeColor=#718096;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="800" y="800" width="240" height="90" />
+        </mxCell>
+        <mxCell id="a1" value="Actualiza avance" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=#FFFFFF;strokeColor=#526477;strokeWidth=1.5;" edge="1" parent="1" source="act" target="pro">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="a2" value="Solicita puntos y logros" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=#FFFFFF;strokeColor=#526477;strokeWidth=1.5;" edge="1" parent="1" source="act" target="gam">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="a3" value="Consulta avance" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=#FFFFFF;strokeColor=#526477;strokeWidth=1.5;" edge="1" parent="1" source="rec" target="pro">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="a4" value="Consulta actividades" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=#FFFFFF;strokeColor=#526477;strokeWidth=1.5;" edge="1" parent="1" source="rec" target="act">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="a5" value="Consulta avance" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=#FFFFFF;strokeColor=#526477;strokeWidth=1.5;" edge="1" parent="1" source="rep" target="pro">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="a6" value="Registra cambios" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=#FFFFFF;strokeColor=#526477;strokeWidth=1.5;" edge="1" parent="1" source="usr" target="aud">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="a7" value="Registra cambios" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=#FFFFFF;strokeColor=#526477;strokeWidth=1.5;" edge="1" parent="1" source="cont" target="aud">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="a8" value="Registra cambios administrativos" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=#FFFFFF;strokeColor=#526477;strokeWidth=1.5;exitX=1;exitY=0.8;entryX=0;entryY=0.4;" edge="1" parent="1" source="act" target="aud">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="note" value="Las colaboraciones se realizan mediante contratos internos.&#10;Respuesta, progreso y puntos deben mantenerse consistentes; los reintentos no duplican puntos.&#10;Esta vista complementa el diagrama general de la primera página." style="rounded=1;whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=15;spacing=10;strokeWidth=1.5;fillColor=#FFFFFF;strokeColor=#718096;strokeColor=none;align=left;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="100" y="950" width="1200" height="100" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -13,3 +13,4 @@ Las restricciones son condiciones que deben respetarse al diseñar e implementar
 | RC07 | Comunicación y acceso seguros | Las comunicaciones deben usar HTTPS y las funciones deben limitarse según el rol del usuario. |
 | RC08 | Protección de datos | Se debe minimizar la recopilación de datos personales y evitar el envío de información identificable de estudiantes a servicios externos de IA. |
 | RC09 | Desarrollo individual | La propuesta arquitectónica debe ser viable para su implementación y mantenimiento por un solo desarrollador. |
+| RC10 | Integración obligatoria con Groq | El tutor IA debe utilizar la API de Groq mediante un contrato interno y un adaptador del backend. La clave se guarda en el servidor; cambiar de proveedor requiere revisar ADR-008 y mantener la funcionalidad de IA. |

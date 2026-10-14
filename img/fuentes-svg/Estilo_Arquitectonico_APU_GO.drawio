@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" modified="2026-10-05T00:00:00.000Z" agent="APU GO" version="24.7.17" type="device">
+  <diagram id="apugo-estilo" name="Estilo arquitectónico APU GO">
+    <mxGraphModel dx="1900" dy="1080" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1080" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;APU GO&lt;/b&gt;  |  Estilo arquitectónico" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#112849;strokeColor=#112849;strokeWidth=2;fontColor=#ffffff;fontSize=28;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="45" y="30" width="1820" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Cliente-servidor · API REST · Monolito modular · Web y Android" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#ffffff;strokeColor=#ffffff;strokeWidth=2;fontColor=#59697d;fontSize=17;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="52" y="108" width="1650" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="users" value="&lt;b&gt;USUARIOS&lt;/b&gt;&lt;br&gt;&lt;br&gt;Estudiantes&lt;br&gt;Docentes&lt;br&gt;Administradores" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#e9f1ff;strokeColor=#6c91d9;strokeWidth=2;fontColor=#183e6b;fontSize=18;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="55" y="335" width="195" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="flutter" value="&lt;b&gt;CLIENTE FLUTTER&lt;/b&gt;&lt;br&gt;&lt;br&gt;Aplicación Web&lt;br&gt;Aplicación Android&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#516376&quot;&gt;Interfaz de usuario&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#e7f7f3;strokeColor=#53aa98;strokeWidth=2;fontColor=#185249;fontSize=18;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="320" y="335" width="225" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="api" value="&lt;b&gt;API REST&lt;/b&gt;&lt;br&gt;&lt;br&gt;HTTPS&lt;br&gt;Entrada a servicios&lt;br&gt;Control de acceso" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#fff3df;strokeColor=#d5a858;strokeWidth=2;fontColor=#6d4b18;fontSize=18;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="615" y="335" width="235" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="backend" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#f7f6ff;strokeColor=#8e90d3;strokeWidth=2;fontColor=#34356f;fontSize=17;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;dashed=1;dashPattern=9 5;" vertex="1" parent="1">
+          <mxGeometry x="930" y="205" width="520" height="635" as="geometry" />
+        </mxCell>
+        <mxCell id="backendhead" value="&lt;b&gt;BACKEND · MONOLITO MODULAR&lt;/b&gt;&lt;br&gt;Una aplicación desplegable" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#e8e8fb;strokeColor=#8d8ed3;strokeWidth=2;fontColor=#34356f;fontSize=19;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="960" y="225" width="460" height="88" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="&lt;b&gt;Aprendizaje&lt;/b&gt;&lt;br&gt;Contenidos y actividades" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#e7f7f3;strokeColor=#6cb3a6;strokeWidth=2;fontColor=#245a52;fontSize=16;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="960" y="350" width="215" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="m2" value="&lt;b&gt;Seguimiento&lt;/b&gt;&lt;br&gt;Progreso y gamificación" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#e9f1ff;strokeColor=#7c9bd4;strokeWidth=2;fontColor=#2d4a79;fontSize=16;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1205" y="350" width="215" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="m3" value="&lt;b&gt;Gestión&lt;/b&gt;&lt;br&gt;Usuarios, reportes y auditoría" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#fff3df;strokeColor=#dfb66a;strokeWidth=2;fontColor=#704b1b;fontSize=16;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="960" y="490" width="215" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="m4" value="&lt;b&gt;Tutor IA y recomendaciones&lt;/b&gt;&lt;br&gt;Groq obligatorio" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#f3ebfc;strokeColor=#a891d7;strokeWidth=2;fontColor=#55427f;fontSize=16;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1205" y="490" width="215" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="backendnote" value="&lt;b&gt;Evolución:&lt;/b&gt; réplicas del backend detrás de un balanceador&lt;br&gt;cuando las métricas muestren saturación" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#ffffff;strokeColor=#c4c6ea;strokeWidth=2;fontColor=#545988;fontSize=16;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="960" y="655" width="460" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="db" value="&lt;b&gt;PostgreSQL&lt;/b&gt;&lt;br&gt;Datos transaccionales" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#e9f1ff;strokeColor=#7297d4;strokeWidth=2;fontColor=#27496f;fontSize=17;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1540" y="240" width="300" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="redis" value="&lt;b&gt;Redis&lt;/b&gt;&lt;br&gt;Caché según demanda" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#fff3e7;strokeColor=#dc9d65;strokeWidth=2;fontColor=#74461e;fontSize=17;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;dashed=1;dashPattern=8 5;" vertex="1" parent="1">
+          <mxGeometry x="1540" y="395" width="300" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="objects" value="&lt;b&gt;Almacenamiento de objetos&lt;/b&gt;&lt;br&gt;Audios e imágenes" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#e7f7f3;strokeColor=#6bb4a8;strokeWidth=2;fontColor=#225d55;fontSize=17;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1540" y="550" width="300" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="ai" value="&lt;b&gt;Groq: API externa de IA&lt;/b&gt;&lt;br&gt;Integración obligatoria" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#f3ebfc;strokeColor=#ad91d9;strokeWidth=2;fontColor=#5a4181;fontSize=17;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;dashPattern=8 5;" vertex="1" parent="1">
+          <mxGeometry x="1540" y="710" width="300" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="cdn" value="&lt;b&gt;CDN&lt;/b&gt;&lt;br&gt;Entrega de recursos multimedia&lt;br&gt;y cliente Web" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#e7f5fc;strokeColor=#76b9da;strokeWidth=2;fontColor=#28516b;fontSize=17;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="320" y="790" width="300" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="footer" value="&lt;b&gt;Lectura:&lt;/b&gt; las líneas continuas muestran el flujo principal; las discontinuas representan la caché Redis según las mediciones; Groq siempre forma parte de la solución." style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#f8fafc;strokeColor=#d6e0eb;strokeWidth=2;fontColor=#53637a;fontSize=15;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;align=left;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="55" y="965" width="1510" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" value="Acceso" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#65758b;strokeWidth=2.5;fontColor=#34445d;fontSize=14;fontFamily=Arial;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="users" target="flutter">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" value="HTTPS / JSON" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#3783ab;strokeWidth=2.5;fontColor=#34445d;fontSize=14;fontFamily=Arial;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="flutter" target="api">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" value="Solicitudes" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#95712e;strokeWidth=2.5;fontColor=#34445d;fontSize=14;fontFamily=Arial;labelBackgroundColor=#ffffff;exitX=1;exitY=0.4;entryX=0;entryY=0.5;" edge="1" parent="1" source="api" target="backendhead">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" value="Reglas de negocio" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#777ac4;strokeWidth=2.5;fontColor=#34445d;fontSize=14;fontFamily=Arial;labelBackgroundColor=#ffffff;exitX=0.27;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="backendhead" target="m1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#777ac4;strokeWidth=2.5;fontColor=#34445d;fontSize=14;fontFamily=Arial;labelBackgroundColor=#ffffff;exitX=0.75;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="backendhead" target="m2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#777ac4;strokeWidth=2.5;fontColor=#34445d;fontSize=14;fontFamily=Arial;labelBackgroundColor=#ffffff;exitX=0.05;exitY=1;entryX=0;entryY=0.2;" edge="1" parent="1" source="backendhead" target="m3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#777ac4;strokeWidth=2.5;fontColor=#34445d;fontSize=14;fontFamily=Arial;labelBackgroundColor=#ffffff;exitX=0.95;exitY=1;entryX=1;entryY=0.2;" edge="1" parent="1" source="backendhead" target="m4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a8" value="Lectura / escritura" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#5a7bb7;strokeWidth=2.5;fontColor=#34445d;fontSize=14;fontFamily=Arial;labelBackgroundColor=#ffffff;exitX=1;exitY=0.4;entryX=0;entryY=0.5;" edge="1" parent="1" source="backendhead" target="db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a9" value="Caché" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#c5834c;strokeWidth=2.5;fontColor=#34445d;fontSize=14;fontFamily=Arial;labelBackgroundColor=#ffffff;exitX=1;exitY=0.75;entryX=0;entryY=0.5;dashed=1;dashPattern=8 5;" edge="1" parent="1" source="backendhead" target="redis">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a10" value="Multimedia" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#4c9b8c;strokeWidth=2.5;fontColor=#34445d;fontSize=14;fontFamily=Arial;labelBackgroundColor=#ffffff;exitX=1;exitY=0.95;entryX=0;entryY=0.5;" edge="1" parent="1" source="backendhead" target="objects">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a11" value="Groq obligatorio" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#9e79c4;strokeWidth=2.5;fontColor=#34445d;fontSize=14;fontFamily=Arial;labelBackgroundColor=#ffffff;exitX=1;exitY=0.75;entryX=0;entryY=0.5;dashPattern=8 5;" edge="1" parent="1" source="m4" target="ai">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a12" value="Origen de recursos" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#4e9fbe;strokeWidth=2.5;fontColor=#34445d;fontSize=14;fontFamily=Arial;labelBackgroundColor=#ffffff;exitX=0.4;exitY=1;entryX=1;entryY=0.5;" edge="1" parent="1" source="objects" target="cdn">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1660" y="930" />
+              <mxPoint x="690" y="930" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a13" value="Entrega Web / audios" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#4e9fbe;strokeWidth=2.5;fontColor=#34445d;fontSize=14;fontFamily=Arial;labelBackgroundColor=#ffffff;exitX=0.25;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="cdn" target="flutter">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

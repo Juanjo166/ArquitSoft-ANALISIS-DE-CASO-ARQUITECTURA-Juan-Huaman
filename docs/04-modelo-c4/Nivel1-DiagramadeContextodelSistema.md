@@ -16,7 +16,7 @@ Este nivel presenta APU GO como un único sistema. Sus aplicaciones, módulos y 
 
 | Persona | Necesidad | Interacción con APU GO |
 |---|---|---|
-| Estudiante | Practicar quechua chanka y conocer su avance. | Consulta lecciones, responde actividades y revisa progreso, puntos, logros y recomendaciones. |
+| Estudiante | Practicar quechua chanka y conocer su avance. | Consulta lecciones, responde actividades y revisa progreso, puntos, logros, recomendaciones y tutoría IA. |
 | Docente | Organizar el aprendizaje y acompañar a sus estudiantes. | Gestiona lecciones y actividades; consulta reportes de los estudiantes a su cargo. |
 | Administrador | Supervisar el funcionamiento y controlar los accesos. | Gestiona usuarios y roles; consulta las acciones administrativas registradas. |
 
@@ -25,7 +25,7 @@ Este nivel presenta APU GO como un único sistema. Sus aplicaciones, módulos y 
 | Sistema | Tipo | Responsabilidad |
 |---|---|---|
 | APU GO | Sistema principal | Ofrecer aprendizaje de quechua chanka mediante contenidos, actividades, gamificación y seguimiento académico. |
-| Servicio externo de IA | Sistema externo opcional | Proporcionar recomendaciones si se habilita una integración que respete los requisitos de privacidad. |
+| Groq: API externa de IA | Sistema externo obligatorio | Proporcionar respuestas del tutor IA y apoyar recomendaciones mediante el adaptador del backend, respetando los requisitos de privacidad. |
 
 PostgreSQL, la API REST y los módulos del backend forman parte de la solución; no se representan como sistemas externos en este nivel.
 
@@ -35,24 +35,24 @@ El almacenamiento multimedia y la CDN se detallarán en el nivel de contenedores
 
 | Origen | Destino | Relación | Requisitos relacionados |
 |---|---|---|---|
-| Estudiante | APU GO | Inicia sesión y utiliza las funciones de aprendizaje. | RF01–RF08 |
+| Estudiante | APU GO | Inicia sesión, utiliza las funciones de aprendizaje y consulta al tutor IA. | RF01–RF08, RF14 |
 | Docente | APU GO | Inicia sesión, gestiona contenidos y actividades, y consulta reportes. | RF01, RF09–RF11 |
 | Administrador | APU GO | Inicia sesión, gestiona usuarios y consulta auditoría. | RF01, RF12, RF13 |
-| APU GO | Servicio externo de IA | Solicita recomendaciones mediante un adaptador opcional. | RF07, AC06, ADR-008 |
-| Servicio externo de IA | APU GO | Devuelve recomendaciones para su procesamiento interno. | RF07 |
+| APU GO | Groq | Solicita respuestas del tutor y apoyo a recomendaciones mediante AdaptadorGroq obligatorio. | RF14, RF07, AC06, ADR-008 |
+| Groq | APU GO | Devuelve asistencia educativa para su validación y presentación al estudiante. | RF14, RF07 |
 
 ## 6. Decisiones y supuestos
 
 - APU GO ofrecerá acceso desde Web y Android.
 - Estudiantes, docentes y administradores tendrán permisos diferentes.
 - Los docentes únicamente podrán consultar información de los estudiantes autorizados.
-- La integración externa de IA es opcional.
-- La versión inicial puede recomendar actividades mediante reglas internas.
+- La integración con la API de Groq es obligatoria para el tutor IA.
+- Las reglas internas validan el contexto y las respuestas; no sustituyen al proveedor de IA.
 - No se enviarán datos identificables de estudiantes al proveedor externo.
 - Las relaciones del diagrama representan interacciones con el sistema, no dependencias del código.
 
 ### Pendientes por definir
 
-- Proveedor externo de IA, si se decide utilizarlo.
+- Modelo de Groq, cuota y configuración operativa del proveedor ya seleccionado.
 - Campos de aprendizaje permitidos para la integración.
 - Organización de grupos y asignación de estudiantes a docentes.

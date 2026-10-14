@@ -11,9 +11,9 @@ Flutter es un cliente separado que consume la API REST. Dentro del backend, la A
 | Capa | Responsabilidad en APU GO | Ejemplos |
 |---|---|---|
 | Dominio | Representar los conceptos y reglas fundamentales del aprendizaje. | Estudiante, lección, actividad, respuesta, progreso y reglas para otorgar puntos. |
-| Aplicación | Coordinar los casos de uso y definir los contratos que necesita para acceder a datos o recomendaciones. | ConsultarLecciones, RegistrarRespuesta, ActualizarProgreso y ObtenerRecomendaciones. |
+| Aplicación | Coordinar los casos de uso y definir los contratos que necesita para acceder a datos, recomendaciones o asistencia del tutor. | ConsultarLecciones, RegistrarRespuesta, ActualizarProgreso y ObtenerRecomendaciones y ConsultarTutorIA. |
 | Presentación y adaptadores | Recibir solicitudes REST, validar su formato y transformar las respuestas para el cliente. | Controladores de actividades y progreso; DTO de entrada y salida. |
-| Infraestructura | Implementar los contratos definidos por la aplicación mediante tecnologías concretas. | Repositorios PostgreSQL, almacenamiento de audios e imágenes e integración opcional con IA. |
+| Infraestructura | Implementar los contratos definidos por la aplicación mediante tecnologías concretas. | Repositorios PostgreSQL, almacenamiento de audios e imágenes e adaptador obligatorio de Groq para el tutor IA. |
 
 ## Regla de dependencias
 
@@ -23,7 +23,7 @@ flowchart TB
     Presentacion["Presentación y adaptadores<br/>Controladores REST · DTO"]
     Aplicacion["Aplicación<br/>Casos de uso · Contratos"]
     Dominio["Dominio<br/>Entidades · Reglas de negocio"]
-    Infraestructura["Infraestructura<br/>PostgreSQL · Archivos · IA opcional"]
+    Infraestructura["Infraestructura<br/>PostgreSQL · Archivos · Adaptador Groq"]
 
     Flutter -->|"Solicitudes HTTPS"| Presentacion
     Presentacion -->|"Depende de"| Aplicacion
@@ -49,3 +49,6 @@ flowchart TB
 - Mantiene separadas las responsabilidades de los módulos del backend.
 - Responde al driver **DA06: mantenibilidad y evolución modular** y a la decisión **ADR-002: aplicar Clean Architecture**.
 
+## Contratos de IA
+
+ServicioTutorIA y ServicioRecomendaciones se definen en aplicación. AdaptadorGroq los implementa en infraestructura; el proveedor no debe importarse desde dominio. ConsultarTutorIA utiliza autenticación, un filtro de datos y el contrato del tutor. La integración es obligatoria para RF14 y cambiar su implementación requiere conservar esa funcionalidad.

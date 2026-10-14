@@ -255,3 +255,7 @@ La configuración de la aplicación crea e inyecta:
 | Asignar puntos y logros | RF06 |
 
 El diseño responde también a AC04: seguridad, AC05: mantenibilidad, DA06: evolución modular y ADR-002: Clean Architecture.
+
+## 10. Relación con el tutor IA obligatorio
+
+RegistrarRespuesta continúa utilizando estrategias del dominio y transacciones PostgreSQL. ConsultarTutorIA pertenece al módulo Tutor IA y recomendaciones y utiliza ServicioTutorIA, implementado por AdaptadorGroq. La asistencia contextual no reemplaza la evaluación ni modifica puntos. El diseño del tutor y sus fallos se documenta en [Integración con Groq](../../02-arquitectura-software/integracion-groq.md).

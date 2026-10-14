@@ -10,7 +10,8 @@ Documentar los patrones propuestos para organizar el backend de APU GO, indicand
 - Enfoque interno: Clean Architecture.
 - Cliente: Flutter para Web y Android.
 - Persistencia: PostgreSQL.
-- Integraciones opcionales: servicio externo de IA y Redis.
+- Integración obligatoria: API de Groq para el tutor IA.
+- Integración opcional: Redis, según mediciones.
 
 Los patrones descritos son propuestas de diseño. Su implementación se verificará durante el desarrollo.
 
@@ -19,7 +20,7 @@ Los patrones descritos son propuestas de diseño. Su implementación se verifica
 | Patrón | Dónde se utiliza | Problema que resuelve | Implementación propuesta | Elementos de código previstos |
 |---|---|---|---|---|
 | Repository | Contenidos, actividades y progreso → PostgreSQL | Evitar que los casos de uso dependan de SQL o de un ORM concreto. | Contratos de repositorio en aplicación e implementaciones en infraestructura. | RepositorioActividades, RepositorioProgreso, RepositorioProgresoPostgreSQL. |
-| Adapter | Recomendaciones → servicio externo de IA | Adaptar la API del proveedor al contrato interno y controlar los datos enviados. | Adaptador que transforma solicitudes y respuestas, excluyendo campos personales no permitidos. | ServicioRecomendaciones, AdaptadorIAExterna. |
+| Adapter | Tutor IA y recomendaciones → Groq | Adaptar la API del proveedor al contrato interno y controlar los datos enviados. | Adaptador que transforma solicitudes y respuestas, excluyendo campos personales no permitidos. | ServicioTutorIA, ServicioRecomendaciones, AdaptadorGroq. |
 | Strategy | Evaluación de respuestas | Aplicar reglas diferentes para actividades de selección y escritura sin concentrarlas en un único bloque de condiciones. | Una interfaz de evaluación con estrategias intercambiables según el tipo de actividad. | EstrategiaEvaluacion, EvaluacionSeleccion, EvaluacionEscritura. |
 | Decorator | Consulta de contenidos → caché opcional | Agregar caché sin cambiar los casos de uso que consultan lecciones. | Un repositorio decorado consulta Redis y delega al repositorio original cuando no encuentra el dato. | RepositorioContenidosConCache. |
 
@@ -35,9 +36,9 @@ Las operaciones de respuesta, progreso y puntos deben coordinarse mediante una t
 
 ### Adapter
 
-El caso de uso ObtenerRecomendaciones utiliza un contrato interno.
+Los casos de uso ConsultarTutorIA (RF14) y ObtenerRecomendaciones (RF07) utilizan contratos internos de aplicación.
 
-Si se habilita un proveedor externo de IA, el adaptador convierte los datos permitidos al formato de su API y transforma la respuesta al formato utilizado por APU GO.
+AdaptadorGroq es obligatorio: convierte los mensajes y el contexto educativo permitidos al formato de la API de Groq y transforma la respuesta al formato utilizado por APU GO. Las claves y el modelo se configuran en el servidor.
 
 La integración debe excluir información identificable del estudiante y manejar de forma controlada los errores del proveedor.
 
@@ -84,6 +85,6 @@ No se incorporarán patrones adicionales sin una necesidad concreta.
 | Patrón | Decisiones relacionadas |
 |---|---|
 | Repository | ADR-002: Clean Architecture. |
-| Adapter | ADR-005: privacidad; ADR-008: contrato interno de recomendaciones. |
+| Adapter | ADR-005: privacidad; ADR-008: contratos internos de tutoría y recomendaciones con Groq obligatorio. |
 | Strategy | ADR-002: separación de reglas de negocio. |
 | Decorator | ADR-004: caché incorporada según mediciones. |
